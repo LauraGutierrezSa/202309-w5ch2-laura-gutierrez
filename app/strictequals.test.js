@@ -9,4 +9,10 @@ describe("Given two numbers", () => {
       expect(numbers).toBe(expectedResult);
     });
   });
+
+  describe("When given two NaN values", () => {
+    test("It should return false (Rule Exception)", () => {
+      expect(strictEquals(NaN, NaN)).toBe(false);
+    });
+  });
 });

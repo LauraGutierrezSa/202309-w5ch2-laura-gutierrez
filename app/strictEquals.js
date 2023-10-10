@@ -1,6 +1,11 @@
 const strictEquals = (valueA, valueB) => {
+  const isNaN = (value) => Object.is(value, NaN);
+
+  if (isNaN(valueA) && isNaN(valueB)) {
+    return false;
+  }
+
   return Object.is(valueA, valueB);
 };
 
-console.log(strictEquals(1, 1));
 export default strictEquals;
