@@ -6,7 +6,3 @@ if [ "$branch" = "master" ] || [ "$branch" = "main" ]; then
   exit 1
 fi
 
-exec >/dev/tty 2>&1
-
-npx lint-stagedbranch="$(git symbolic-ref --short -q HEAD)"
-
