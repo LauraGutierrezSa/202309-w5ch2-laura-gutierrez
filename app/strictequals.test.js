@@ -11,8 +11,20 @@ describe("Given two numbers", () => {
   });
 
   describe("When given two NaN values", () => {
-    test("Then it should return false (Rule Exception)", () => {
+    test("Then it should return false", () => {
       expect(strictEquals(NaN, NaN)).toBe(false);
+    });
+  });
+
+  describe("When given -0 and 0", () => {
+    test("Then it should return true", () => {
+      const isNegativeZero = (value) => Object.is(value, -0);
+      const valueA = 0;
+      const valueB = 0;
+
+      if (isNegativeZero(valueA) && isNegativeZero(valueB)) {
+        expect(strictEquals(valueA, valueB)).toBe(true);
+      }
     });
   });
 });
