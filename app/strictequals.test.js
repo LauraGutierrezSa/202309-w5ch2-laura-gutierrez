@@ -39,4 +39,15 @@ describe("Given two numbers", () => {
       }
     });
   });
+
+  describe("When given 1 and '1'", () => {
+    test("Then it should return false", () => {
+      const valueA = 1;
+      const valueB = "1";
+      const expectedStrictEquals = false;
+
+      const actualStrictEquals = strictEquals(valueA, valueB);
+      expect(actualStrictEquals).toBe(expectedStrictEquals);
+    });
+  });
 });
