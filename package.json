@@ -1,12 +1,29 @@
 {
   "name": "w5ch2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Program that returns strict equals.",
+  "main": "./app/strictEquals.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "start:dev": "node --watch ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.23.0",
+    "@types/jest": "^29.5.5",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-xo": "^0.43.1"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  }
 }
