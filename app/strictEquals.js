@@ -1,7 +1,8 @@
 const strictEquals = (valueA, valueB) => {
-  const isNaN = (value) => Object.is(value, NaN);
+  const isValueANaN = Object.is(valueA, NaN);
+  const isValueBNaN = Object.is(valueB, NaN);
 
-  if (isNaN(valueA) && isNaN(valueB)) {
+  if (isValueANaN && isValueBNaN) {
     return false;
   }
 
