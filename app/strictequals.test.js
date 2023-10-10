@@ -11,7 +11,7 @@ describe("Given two numbers", () => {
   });
 
   describe("When given two NaN values", () => {
-    test("It should return false (Rule Exception)", () => {
+    test("Then it should return false (Rule Exception)", () => {
       expect(strictEquals(NaN, NaN)).toBe(false);
     });
   });
