@@ -61,5 +61,17 @@ describe("Given two numbers", () => {
 
       expect(isActualBoolean).toBe(expectedResult);
     });
+
+    describe("When given a false and a false", () => {
+      test("Then it should return false", () => {
+        const valueA = false;
+        const valueB = false;
+
+        const actualStrictEquals = strictEquals(valueA, valueB);
+        const expectedResult = true;
+
+        expect(actualStrictEquals).toBe(expectedResult);
+      });
+    });
   });
 });
