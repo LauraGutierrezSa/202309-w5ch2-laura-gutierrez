@@ -50,4 +50,16 @@ describe("Given two numbers", () => {
       expect(actualStrictEquals).toBe(expectedStrictEquals);
     });
   });
+
+  describe("When given a true and a false", () => {
+    test("Then it should return false", () => {
+      const valueA = true;
+      const valueB = false;
+
+      const isActualBoolean = strictEquals(valueA, valueB);
+      const expectedResult = false;
+
+      expect(isActualBoolean).toBe(expectedResult);
+    });
+  });
 });
