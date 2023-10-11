@@ -74,4 +74,16 @@ describe("Given two numbers", () => {
       });
     });
   });
+
+  describe("When given 'Water' and 'oil'", () => {
+    test("Then it should return false", () => {
+      const valueA = "Water";
+      const valueB = "oil";
+
+      const actualStrictEquals = strictEquals(valueA, valueB);
+      const expectedResult = false;
+
+      expect(actualStrictEquals).toBe(expectedResult);
+    });
+  });
 });
