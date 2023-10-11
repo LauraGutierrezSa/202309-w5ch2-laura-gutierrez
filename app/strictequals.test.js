@@ -4,9 +4,9 @@ describe("Given two numbers", () => {
   describe("When given a 1 and a 1", () => {
     test("Then it should return true", () => {
       const expectedResult = true;
-      const numbers = strictEquals(2, 2);
+      const actualNumbers = strictEquals(2, 2);
 
-      expect(numbers).toBe(expectedResult);
+      expect(actualNumbers).toBe(expectedResult);
     });
   });
 
@@ -72,6 +72,18 @@ describe("Given two numbers", () => {
 
         expect(actualStrictEquals).toBe(expectedResult);
       });
+    });
+  });
+
+  describe("When given 'Water' and 'oil'", () => {
+    test("Then it should return false", () => {
+      const valueA = "Water";
+      const valueB = "oil";
+
+      const actualStrictEquals = strictEquals(valueA, valueB);
+      const expectedResult = false;
+
+      expect(actualStrictEquals).toBe(expectedResult);
     });
   });
 });
